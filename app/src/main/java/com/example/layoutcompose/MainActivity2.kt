@@ -15,7 +15,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.layoutcompose.ui.theme.LayoutComposeTheme
 import dev.chrisbanes.accompanist.coil.CoilImage
@@ -49,7 +53,10 @@ fun LayoutsCodelab() {
             )
         }
     ) { innerPadding ->
-        BodyContent(Modifier.padding(innerPadding).padding(8.dp))
+        BodyContent(
+            Modifier
+                .padding(innerPadding)
+                .padding(8.dp))
     }
 }
 
@@ -62,10 +69,10 @@ fun BodyContent(modifier: Modifier = Modifier) {
     val coroutineScope = rememberCoroutineScope()
 
     Column(modifier = modifier) {
-        Text(text = "Hi there!")
+        Text("Hi there!")
         Text(text = "Thanks for going through the Layouts codelab")
         Divider(color = Color.Blue, thickness = 3.dp)
-        ButtonsListsOrder(scrollState,coroutineScope)
+        ButtonsListsOrder(scrollState, coroutineScope)
         Divider(color = Color.Blue, thickness = 3.dp)
         LazyList(scrollState)
     }
