@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LayoutCompose">
         <activity
+            android:name=".MainActivity7"
+            android:exported="true"
+            android:label="@string/title_activity_main7"
+            android:theme="@style/Theme.LayoutCompose.NoActionBar"></activity>
+        <activity
+            android:name=".ui.theme.MainActivity7"
+            android:exported="true"
+            android:label="@string/title_activity_main7"
+            android:theme="@style/Theme.LayoutCompose.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity6"
+            android:exported="true"
+            android:label="@string/title_activity_main6"
+            android:theme="@style/Theme.LayoutCompose.NoActionBar" />
+        <activity
             android:name=".MainActivity5"
             android:exported="true"
             android:label="@string/app_name"
